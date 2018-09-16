@@ -1,0 +1,250 @@
+@charset "utf-8";
+
+html {
+  font-size: 62.5%;
+  color: #333;
+}
+
+body {
+  margin: 0;
+}
+
+*, *::before, *::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+p, h1, menu {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h2 {
+  margin: 24px 0;
+}
+
+h2, h3 {
+  color: #54B6E6;
+}
+
+.container {
+  padding: 0 30px;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.header-img {
+  float: left;
+  width: 50%;
+}
+
+.header-address {
+  float: right;
+  width: 50%;
+  text-align: right;
+  margin-top: 16px;
+}
+
+.header-address a {
+  color: #E59A42;
+}
+
+/*top*/
+.top-wrapper {
+  padding: 140px 0 100px 160px;
+  background-image: url(file:///Users/sugawaraken/Documents/python/sample1/hospital.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 20%;
+}
+
+.top-wrapper h1 {
+  font-size: 4.0rem;
+  line-height: 48px;
+  color: #fff;
+
+  text-shadow:
+  black 1px 1px 0, black -1px -1px 0,/*右下、左上*/
+  black -1px 1px 0, black 1px -1px 0,/*右上、左下*/
+  black 0px 1px 0, black  0-1px 0,/*右、左*/
+  black -1px 0 0, black 1px 0 0;/*上、下*/
+
+}
+
+/*menu*/
+menu {
+  height: 90px;
+  background-color: #54B6E6;
+}
+
+menu ul {
+  font-size: 0;
+  text-align: center;
+}
+
+menu li {
+  display: inline-block;
+  width: 20%;
+  font-size: 2.4rem;
+  height: 90px;
+  border-right: solid 2px #fff;
+}
+
+menu li:nth-child(1) {
+  border-left: solid 2px #fff;
+}
+
+menu li a {
+  display: block;
+  height: 90px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding-top: 14px;
+
+}
+
+menu .sub {
+  font-size: 1.4rem;
+}
+
+/*main*/
+.main-contents {
+  float: left;
+  width: 70%;
+}
+
+.sub-contents {
+  float: left;
+  width: 30%;
+}
+
+.main-wrapper h2 {
+  font-size: 2.0rem;
+}
+
+.main-wrapper h3 {
+  font-size: 1.6rem;
+}
+
+.main-contents time {
+  color: #54B6E6;
+  font-weight: bold;
+}
+
+.main-wrapper .about {
+  float:left;
+  width: 33.333%;
+}
+
+.main-wrapper .about img {
+  width: 170px;
+  height: 120px;
+}
+
+.main-wrapper .about {
+  padding-right: 20px;
+}
+
+.main-contents {
+  padding-right: 14px;
+}
+
+.sub-contents {
+  text-align: right;
+}
+
+.sub-contents p {
+  color: #54B6E6;
+  font-weight: bold;
+  font-size: 2.0rem;
+}
+
+.sub-contents-h2 {
+  letter-spacing: 4px;
+  background-color: #FEF8BF;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+
+
+.week {
+  float: left;
+  width: auto;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #fff;
+  background-color: #54B6E6;
+  border-radius: 5px;
+  padding: 12px 10px 10px;
+  letter-spacing: 5px;
+}
+
+.time {
+  float: right;
+  width: auto;
+}
+
+.weekend {
+  background-color: #E59A42;
+}
+
+.weekend-time {
+  margin-top: 14px;
+}
+
+/*footer*/
+footer {
+  background-color: #54B6E6;
+
+  padding: 20px 0;
+}
+
+footer a {
+  text-decoration: underline;
+  color: #14658C;
+
+}
+
+footer .back {
+  font-size: 1.8rem;
+}
+
+.footer-wrapper {
+  margin: 20px 0;
+}
+
+.footer-wrapper ul {
+  float: left;
+  width: auto;
+
+  padding-right: 24px;
+}
+
+.footer-wrapper a {
+  font-size: 1.64em;
+}
+
+
+.footer-wrapper li {
+  margin-bottom: 6px;
+}
