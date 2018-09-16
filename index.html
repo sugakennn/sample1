@@ -4,14 +4,57 @@
     <title>SAMPLE1</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="progate_2.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script>
+  $(function(){
+    $('span.menu-icon').click(function(){
+
+      if ($('.menu-sp').hasClass('display')) {
+        $('.menu-sp').slideDown().removeClass('display').addClass('active');
+      } else if ($('.menu-sp').hasClass('active')) {
+        $('.menu-sp').slideUp().removeClass('active').addClass('display');
+      }
+
+    });
+
+    $('header, .top-wrapper, menu, section, footer').not('header').click(function(){
+
+      if ($('.menu-sp').hasClass('active')) {
+        $('.menu-sp').slideUp().removeClass('active').addClass('display');
+      }
+
+    });
+
+    $(window).scroll(function(){
+      var position = $(this).scrollTop();
+      if (position > 120) {
+        $('i.fa-arrow-circle-up').fadeIn();
+      } else if (position <= 120) {
+        $('i.fa-arrow-circle-up').fadeOut();
+      }
+    });
+
+
+    $('.fa-arrow-circle-up').click(function(){
+      $('html, body').animate({
+        'scrollTop': 0
+      }, 'slow');
+    });
+
+  })
+  </script>
   </head>
   <body>
 
     <header>
-      <div class="container">
+      <div class="container header-pc">
         <div class="header-wrapper clearfix">
-          <img src="logo.png" alt="会社ロゴ" class="header-img">
+          <a href="#"><img src="file:///Users/sugawaraken/Documents/python/sample1/logo.png" alt="会社ロゴ" class="header-img"></a>
           <div class="header-address">
             <p>医療法人〇〇サンプルクリニック</p>
             <p>123-0000 東京都品川区〇〇1-1-1-000 テストビル1階<a href="#">[MAP]</a></p>
@@ -19,10 +62,27 @@
           </div>
         </div>
       </div>
+
+      <a href="#"><img src="file:///Users/sugawaraken/Documents/python/sample1/logo2.png" alt="会社ロゴ" class="header-img-sp"></a>
+      <span class="fa fa-bars menu-icon"></span>
+
+      <div class="menu-sp display">
+
+          <ul>
+            <li><a href="#">理念</a></li>
+            <li><a href="#">院長紹介</a></li>
+            <li><a href="#">診療科目</a></li>
+            <li><a href="#">診療時間</a></li>
+            <li><a href="#">よくある質問</a></li>
+          </ul>
+
+      </div>
+
     </header>
 
     <div class="top-wrapper">
-      <h1 class="">土日も診療、駅から徒歩1分。</h1>
+
+      <h1 class="">土日も診療、<span class="bar"></span>駅から徒歩1分。</h1>
       <h1 class="">あなたのホームドクターに。</h1>
     </div>
 
@@ -51,19 +111,19 @@
             <div class="about-wrapper clearfix">
 
               <div class="about">
-                <img src="dol.png" alt="">
+                <img src="file:///Users/sugawaraken/Documents/python/sample1/dol.png" alt="">
                 <h3>一般診療</h3>
                 <p>発熱や頭痛などでお困りの際はご相談ください。提示しております内科や小児科、呼吸器内科などの他にも簡単なケガの治療も致します。</p>
               </div>
 
               <div class="about">
-                <img src="dol.png" alt="">
+                <img src="file:///Users/sugawaraken/Documents/python/sample1/dol.png" alt="">
                 <h3>リハビリテーション</h3>
                 <p>当クリニックは後遺症やリウマチなどのリハビリテーション機材をそろえております。お気軽にご相談ください。予約制となります。</p>
               </div>
 
               <div class="about">
-                <img src="dol.png" alt="">
+                <img src="file:///Users/sugawaraken/Documents/python/sample1/dol.png" alt="">
                 <h3>健康診断</h3>
                 <p>ヘリカルCT完備。通常の一般健康診断のほか、人間ドックなども受け付けております。日頃の健康に不安な点がございましたら、お気軽にお尋ねください。</p>
               </div>
@@ -124,8 +184,19 @@
             <li><a href="#">メール</a></li>
           </ul>
         </div>
+
+        <div class="footer-address-sp display">
+          <p>医療法人〇〇サンプルクリニック</p>
+          <p>123-0000 東京都品川区〇〇1-1-1-000 テストビル1階<a href="#">[MAP]</a></p>
+          <p>電話：03 - 0000 - 1234</p>
+        </div>
+
       </div>
     </footer>
+
+    <i class="fas fa-arrow-circle-up"></i>
+
+
 
   </body>
 </html>
