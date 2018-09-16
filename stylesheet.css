@@ -67,7 +67,7 @@ h2, h3 {
 /*top*/
 .top-wrapper {
   padding: 140px 0 100px 160px;
-  background-image: url(file:///Users/sugawaraken/Documents/python/sample1/hospital.png);
+  background-image: url(hospital.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 20%;
