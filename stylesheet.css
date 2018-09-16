@@ -320,11 +320,11 @@ footer .back {
   }
 
   .week {
-    padding: 0;
+    margin-right: 6px;
   }
-  
-  .time {
-    margin-left: 70px;
+
+  .Android {
+    padding: 0px 10px 10px;
   }
 
 
