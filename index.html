@@ -42,6 +42,10 @@
         'scrollTop': 0
       }, 'slow');
     });
+    
+    if ( navigator.userAgent.indexOf('Android') > 0 ) {
+        $("body").addClass("Android");
+    };
 
   })
   </script>
